@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" 
+           style="-fx-background-color: #A0A0A0;">
+
+    <VBox alignment="CENTER" spacing="20">
+        
+        <ImageView fitWidth="200" preserveRatio="true">
+            <image>
+                <Image url="@wolves_logo.png"/>
+            </image>
+        </ImageView>
+        
+        <Button text="READY!" 
+                style="-fx-background-color: transparent; 
+                       -fx-border-color: #5599FF; 
+                       -fx-border-width: 2; 
+                       -fx-text-fill: #5599FF; 
+                       -fx-padding: 10 25 10 25; 
+                       -fx-font-size: 16px; 
+                       -fx-font-weight: bold;"/>
+                       
+    </VBox>
+
+    <StackPane alignment="BOTTOM_LEFT" style="-fx-padding: 20;">
+        <Label text="❌ Select   ⭕ Back" 
+               style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+    </StackPane>
+
+</StackPane>
