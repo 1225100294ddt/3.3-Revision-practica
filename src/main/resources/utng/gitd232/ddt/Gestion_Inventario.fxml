@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="utng.gitd232.ddt.GestionInventarioController">
+
+    <top>
+        <Label text="GESTIÓN DE INVENTARIO"
+               alignment="CENTER"
+               maxWidth="Infinity"
+               style="-fx-background-color:#1E3A8A;
+                      -fx-text-fill:white;
+                      -fx-padding:15;
+                      -fx-font-size:22;
+                      -fx-font-weight:bold;"/>
+    </top>
+
+    <center>
+
+        <VBox spacing="15" alignment="TOP_CENTER">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <GridPane hgap="15" vgap="15">
+
+                <Label text="Código:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+
+                <TextField fx:id="txtCodigo"
+                           promptText="INV-001"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Nombre:"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="2"/>
+
+                <TextField fx:id="txtNombre"
+                           promptText="Laptop Dell"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="3"/>
+
+                <Label text="Serie:"
+                       GridPane.rowIndex="1"
+                       GridPane.columnIndex="0"/>
+
+                <TextField fx:id="txtSerie"
+                           promptText="ABC12345"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"/>
+
+                <Label text="Cantidad:"
+                       GridPane.rowIndex="1"
+                       GridPane.columnIndex="2"/>
+
+                <TextField fx:id="txtCantidad"
+                           promptText="1"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="3"/>
+
+            </GridPane>
+
+            <HBox spacing="10" alignment="CENTER">
+
+                <Button fx:id="btnAgregar"
+                        text="Agregar"
+                        prefWidth="100"
+                        onAction="#agregarEquipo"/>
+
+                <Button fx:id="btnModificar"
+                        text="Modificar"
+                        prefWidth="100"
+                        onAction="#modificarEquipo"/>
+
+                <Button fx:id="btnEliminar"
+                        text="Eliminar"
+                        prefWidth="100"
+                        onAction="#eliminarEquipo"/>
+
+                <Button fx:id="btnListar"
+                        text="Listar"
+                        prefWidth="100"
+                        onAction="#listarEquipos"/>
+
+                <Button fx:id="btnLimpiar"
+                        text="Limpiar"
+                        prefWidth="100"
+                        onAction="#limpiarCampos"/>
+
+            </HBox>
+
+            <TableView fx:id="tblInventario"
+                       prefHeight="350"
+                       prefWidth="760">
+
+                <columns>
+
+                    <TableColumn fx:id="colCodigo"
+                                 text="Código"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colNombre"
+                                 text="Nombre"
+                                 prefWidth="240"/>
+
+                    <TableColumn fx:id="colSerie"
+                                 text="Serie"
+                                 prefWidth="160"/>
+
+                    <TableColumn fx:id="colCantidad"
+                                 text="Cantidad"
+                                 prefWidth="100"/>
+
+                    <TableColumn fx:id="colEstado"
+                                 text="Estado"
+                                 prefWidth="140"/>
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>
